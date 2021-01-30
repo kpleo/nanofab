@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-mask_file = "./Aerial_image/mask.mat"
+mask_file = "./mask.mat"
 data = scio.loadmat(mask_file)
 mask = data["mask"]
 
@@ -28,8 +28,7 @@ for n in range(257):
         # print(data)
         surface[n, int(data + (2561 - 1) / 2)] = y[:, a]
 plt.cla()
-# plt.imshow(surface)
-# plt.show()
+
 X = np.arange(-1280, 1281, 1)
 Y = np.arange(0, 257, 1)
 print(len(X), len(Y))
